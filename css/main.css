@@ -313,7 +313,6 @@ template {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  display: inline;
 }
 
 *,
@@ -322,15 +321,19 @@ html {
   box-sizing: inherit;
 }
 
-body,
-html {
+html,
+body {
   margin: 0;
   padding: 0;
-  scroll-behavior: auto;
   font-optical-sizing: auto;
 }
 
-canvas {
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+canvas,
+img {
   display: block;
 }
 
@@ -339,14 +342,6 @@ figure {
   margin: 0;
   padding: 0;
   line-height: 0;
-}
-
-img {
-  display: block;
-}
-
-body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1,
@@ -366,7 +361,6 @@ ul {
 
 main {
   min-height: 100vh;
-  background: gold;
   display: flex;
   flex-direction: column;
 }
@@ -384,26 +378,6 @@ main {
   font-display: swap;
   font-weight: 100 900;
   font-style: italic;
-}
-header {
-  background-color: palevioletred;
-  border: 3px solid red;
-}
-header__upper {
-  background-color: chartreuse;
-}
-header__brand {
-  border: 5px solid blue;
-}
-
-aside {
-  background-color: green;
-  padding: 0;
-  margin: 0;
-}
-aside p {
-  padding: 0;
-  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
