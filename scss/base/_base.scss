@@ -3,7 +3,6 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  display: inline;
 }
 
 *,
@@ -12,15 +11,19 @@ html {
   box-sizing: inherit;
 }
 
-body,
-html {
+html,
+body {
   margin: 0;
   padding: 0;
-  scroll-behavior: auto;
   font-optical-sizing: auto;
 }
 
-canvas {
+body {
+  @include a.font-stack(a.$font-primary);
+}
+
+canvas,
+img {
   display: block;
 }
 
@@ -31,15 +34,6 @@ figure {
   line-height: 0;
 }
 
-img {
-  display: block;
-}
-
-body {
-  @include a.font-stack(a.$font-primary);
-  // @include a.font-size('base');
-}
-
 h1,
 h2,
 h3,
@@ -47,7 +41,6 @@ h4,
 h5,
 h6 {
   letter-spacing: -0.25px;
-  // @include a.font-stack(a.$font-secondary);
 }
 
 ul {
@@ -58,7 +51,6 @@ ul {
 
 main {
   min-height: 100vh;
-  background: gold;
   display: flex;
   flex-direction: column;
 }
