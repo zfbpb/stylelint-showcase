@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Demo styles</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <div class="demo-layout">
+      <aside class="demo-sidebar" aria-label="Primary navigation">
+        <div class="demo-sidebar__inner">
+          <p class="eyebrow">Docs demo</p>
+          <h2>Components</h2>
+          <nav>
+            <ul>
+              <li><a href="#typography">Typography</a></li>
+              <li><a href="#lists">Lists</a></li>
+              <li><a href="#quotes">Quotes</a></li>
+              <li><a href="#code">Code</a></li>
+              <li><a href="#tables">Tables</a></li>
+              <li><a href="#media">Media</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#details">Details</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="demo-main">
+        <header class="demo-hero">
+          <p class="eyebrow">Documentation style test</p>
+          <h1>Stripe-like docs style showcase</h1>
+          <p class="lead">
+            This page contains a broad set of standard HTML elements so you can
+            test typography, spacing, code formatting, tables, callouts, forms,
+            and content hierarchy in one place.
+          </p>
+          <p>
+            Visit the <a href="https://docs.stripe.com/" target="_blank" rel="noreferrer">reference docs</a>
+            or jump to the <a href="#code">code examples</a> section.
+          </p>
+        </header>
+
+        <article class="demo-content">
+          <section id="typography">
+            <h2>Typography</h2>
+            <p>
+              This is a standard paragraph with an <a href="#">inline link</a>,
+              <strong>strong text</strong>, <em>emphasized text</em>,
+              <small>small text</small>, <mark>highlighted text</mark>, and
+              inline code like <code>const apiKey = 'sk_test_123';</code>.
+            </p>
+            <p>
+              You may also want to style abbreviations such as
+              <abbr title="Application Programming Interface">API</abbr>,
+              keyboard keys like <kbd>⌘</kbd> + <kbd>K</kbd>, and references such
+              as H<sub>2</sub>O or x<sup>2</sup>.
+            </p>
+
+            <h3>Heading level 3</h3>
+            <p>
+              Paragraph text under an <code>h3</code>. Good docs layouts usually
+              tune vertical rhythm very carefully between headings, prose,
+              examples, and lists.
+            </p>
+
+            <h4>Heading level 4</h4>
+            <p>
+              This level is often used for subsections within guides or API
+              concepts.
+            </p>
+
+            <h5>Heading level 5</h5>
+            <p>Useful when a section contains smaller grouped examples.</p>
+
+            <h6>Heading level 6</h6>
+            <p>Rarely used, but still worth styling so it does not break.</p>
+
+            <hr />
+          </section>
+
+          <section id="lists">
+            <h2>Lists</h2>
+
+            <h3>Unordered list</h3>
+            <ul>
+              <li>Install the SDK.</li>
+              <li>Configure your API keys.</li>
+              <li>Test with sample data.</li>
+              <li>
+                Review nested content:
+                <ul>
+                  <li>Nested bullet one</li>
+                  <li>Nested bullet two</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Ordered list</h3>
+            <ol>
+              <li>Create an account.</li>
+              <li>Generate a restricted key.</li>
+              <li>Send a test request.</li>
+              <li>Inspect the API response.</li>
+            </ol>
+
+            <h3>Description list</h3>
+            <dl>
+              <dt>Publishable key</dt>
+              <dd>Used on the client side to initialize SDKs safely.</dd>
+              <dt>Secret key</dt>
+              <dd>Used on the server side to authenticate API requests.</dd>
+              <dt>Webhook signing secret</dt>
+              <dd>Used to verify incoming webhook payloads.</dd>
+            </dl>
+          </section>
+
+          <section id="quotes">
+            <h2>Quotes and callouts</h2>
+            <blockquote>
+              <p>
+                Build your integration using test mode first, then switch to
+                live credentials only after validating webhook handling and
+                error cases.
+              </p>
+              <cite>Integration best practice</cite>
+            </blockquote>
+
+            <div class="callout callout--info">
+              <strong>Note:</strong> This is a generic callout container you can
+              style later as an info box.
+            </div>
+
+            <div class="callout callout--warning">
+              <strong>Warning:</strong> Never expose secret API keys in browser
+              code.
+            </div>
+
+            <div class="callout callout--success">
+              <strong>Success:</strong> Test payment completed successfully.
+            </div>
+          </section>
+
+          <section id="code">
+            <h2>Code</h2>
+            <p>
+              Inline code should look distinct from prose, while code blocks
+              should handle overflow, padding, and syntax contrast.
+            </p>
+
+            <pre><code>curl https://api.example.com/v1/customers \
+  -u sk_test_123: \
+  -d email="jenny.rosen@example.com" \
+  -d name="Jenny Rosen"</code></pre>
+
+            <pre><code>async function createCustomer() {
+  const response = await fetch('/api/customers', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: 'jenny.rosen@example.com'
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error('Request failed');
+  }
+
+  return response.json();
+}</code></pre>
+          </section>
+
+          <section id="tables">
+            <h2>Tables</h2>
+            <table>
+              <caption>
+                Example API response fields
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Field</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Required</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">id</th>
+                  <td>string</td>
+                  <td>Yes</td>
+                  <td>Unique identifier for the object.</td>
+                </tr>
+                <tr>
+                  <th scope="row">email</th>
+                  <td>string</td>
+                  <td>No</td>
+                  <td>Customer email address.</td>
+                </tr>
+                <tr>
+                  <th scope="row">created</th>
+                  <td>timestamp</td>
+                  <td>Yes</td>
+                  <td>Unix timestamp for resource creation.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="media">
+            <h2>Media</h2>
+            <figure>
+              <img
+                src="https://placehold.co/960x540"
+                alt="Placeholder preview for media styling"
+              />
+              <figcaption>
+                Example figure caption for images, diagrams, or screenshots.
+              </figcaption>
+            </figure>
+          </section>
+
+          <section id="forms">
+            <h2>Form elements</h2>
+            <form>
+              <p>
+                <label for="name">Name</label><br />
+                <input id="name" name="name" type="text" placeholder="Jenny Rosen" />
+              </p>
+
+              <p>
+                <label for="email">Email</label><br />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="jenny.rosen@example.com"
+                />
+              </p>
+
+              <p>
+                <label for="plan">Plan</label><br />
+                <select id="plan" name="plan">
+                  <option>Starter</option>
+                  <option>Growth</option>
+                  <option>Enterprise</option>
+                </select>
+              </p>
+
+              <fieldset>
+                <legend>Environment</legend>
+                <label><input type="radio" name="env" checked /> Test</label>
+                <label><input type="radio" name="env" /> Live</label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Capabilities</legend>
+                <label><input type="checkbox" checked /> Payments</label>
+                <label><input type="checkbox" /> Billing</label>
+                <label><input type="checkbox" /> Webhooks</label>
+              </fieldset>
+
+              <p>
+                <label for="notes">Notes</label><br />
+                <textarea id="notes" name="notes" rows="5" placeholder="Add implementation notes..."></textarea>
+              </p>
+
+              <p>
+                <button type="button">Secondary action</button>
+                <button type="submit">Primary action</button>
+              </p>
+            </form>
+          </section>
+
+          <section id="details">
+            <h2>Details and miscellaneous elements</h2>
+            <details>
+              <summary>Expand for extra implementation notes</summary>
+              <p>
+                This area is useful for FAQs, advanced explanations, or optional
+                setup details.
+              </p>
+            </details>
+
+            <p>
+              Progress example:
+              <progress max="100" value="72">72%</progress>
+            </p>
+
+            <p>
+              Meter example:
+              <meter min="0" max="100" value="64">64%</meter>
+            </p>
+          </section>
+        </article>
+      </main>
+
+      <aside class="demo-toc" aria-label="On this page">
+        <div class="demo-toc__inner">
+          <p class="eyebrow">On this page</p>
+          <ul>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#details">Details</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

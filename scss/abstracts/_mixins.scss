@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'variables' as v;
+@use 'functions' as f;
+
+@mixin font-stack($fonts...) {
+  font-family: f.make-font-stack($fonts...);
+}

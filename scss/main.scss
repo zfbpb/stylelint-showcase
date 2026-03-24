@@ -1,0 +1,10 @@
+@use 'vendor/normalize'; 
+
+// base
+@use 'base/base';
+@use 'base/fonts';
+
+// layouts
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/aside';

@@ -1,0 +1,18 @@
+{
+  "name": "html-css-showcase",
+  "version": "1.0.0",
+  "description": "HTML and CSS showcase demo site.",
+  "scripts": {
+    "dev": "concurrently \"sass --watch scss/main.scss:css/main.css\" \"live-server --open=/ --watch=.\"",
+    "build": "sass scss/main.scss css/main.css"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
