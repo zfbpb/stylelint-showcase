@@ -78,9 +78,17 @@ These settings provide:
 
 ## Note
 
-If you want to temporarily disable a specific rule for part of the code, you can use Stylelint comments, for example:
+If you need to bypass linting for a specific part of the code, you can wrap it with Stylelint disable / enable comments, for example:
 
 ```scss
-/* stylelint-disable @stylistic/indentation */
-/* stylelint-enable @stylistic/indentation */
+/* stylelint-disable */
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2'),
+       url('../../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}
+/* stylelint-enable */
 ```
