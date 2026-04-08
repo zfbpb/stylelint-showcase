@@ -2,6 +2,12 @@
 
 Default Stylelint configuration and usage example.
 
+## Requirements
+
+- **Node.js >= 20.18.3**  
+  Required to avoid the JSON modules experimental warning during Stylelint usage.
+- **pnpm 10.15.1**
+
 ## What is used
 
 - **stylelint**  
