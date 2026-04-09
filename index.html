@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Demo styles</title>
+    <title>HTML Elements Showcase</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
   </head>
@@ -14,8 +14,8 @@
     <div class="demo-layout">
       <aside class="demo-sidebar" aria-label="Primary navigation">
         <div class="demo-sidebar__inner">
-          <p class="eyebrow">Docs demo</p>
-          <h2>Components</h2>
+          <p class="demo-label">HTML showcase</p>
+          <h2>Sections</h2>
           <nav>
             <ul>
               <li><a href="#typography">Typography</a></li>
@@ -33,16 +33,16 @@
 
       <main class="demo-main">
         <header class="demo-hero">
-          <p class="eyebrow">Documentation style test</p>
-          <h1>Stripe-like docs style showcase</h1>
+          <p class="demo-label">Style preview</p>
+          <h1>HTML elements showcase</h1>
           <p class="lead">
-            This page contains a broad set of standard HTML elements so you can
-            test typography, spacing, code formatting, tables, callouts, forms,
-            and content hierarchy in one place.
+            This page contains common HTML elements for testing typography,
+            spacing, lists, tables, media, forms, and basic content hierarchy in
+            one place.
           </p>
           <p>
-            Visit the <a href="https://docs.stripe.com/" target="_blank" rel="noreferrer">reference docs</a>
-            or jump to the <a href="#code">code examples</a> section.
+            Use this page as a neutral reference while building and adjusting
+            styles.
           </p>
         </header>
 
@@ -53,7 +53,7 @@
               This is a standard paragraph with an <a href="#">inline link</a>,
               <strong>strong text</strong>, <em>emphasized text</em>,
               <small>small text</small>, <mark>highlighted text</mark>, and
-              inline code like <code>const apiKey = 'sk_test_123';</code>.
+              inline code like <code>const message = 'Hello world';</code>.
             </p>
             <p>
               You may also want to style abbreviations such as
@@ -64,22 +64,18 @@
 
             <h3>Heading level 3</h3>
             <p>
-              Paragraph text under an <code>h3</code>. Good docs layouts usually
-              tune vertical rhythm very carefully between headings, prose,
-              examples, and lists.
+              Paragraph text under an <code>h3</code> heading for testing
+              spacing and hierarchy.
             </p>
 
             <h4>Heading level 4</h4>
-            <p>
-              This level is often used for subsections within guides or API
-              concepts.
-            </p>
+            <p>Useful for deeper content grouping inside a section.</p>
 
             <h5>Heading level 5</h5>
-            <p>Useful when a section contains smaller grouped examples.</p>
+            <p>Smaller heading level for compact grouped examples.</p>
 
             <h6>Heading level 6</h6>
-            <p>Rarely used, but still worth styling so it does not break.</p>
+            <p>Rarely used, but still useful to style consistently.</p>
 
             <hr />
           </section>
@@ -89,34 +85,34 @@
 
             <h3>Unordered list</h3>
             <ul>
-              <li>Install the SDK.</li>
-              <li>Configure your API keys.</li>
-              <li>Test with sample data.</li>
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item</li>
               <li>
-                Review nested content:
+                Nested example
                 <ul>
-                  <li>Nested bullet one</li>
-                  <li>Nested bullet two</li>
+                  <li>Nested item one</li>
+                  <li>Nested item two</li>
                 </ul>
               </li>
             </ul>
 
             <h3>Ordered list</h3>
             <ol>
-              <li>Create an account.</li>
-              <li>Generate a restricted key.</li>
-              <li>Send a test request.</li>
-              <li>Inspect the API response.</li>
+              <li>Step one</li>
+              <li>Step two</li>
+              <li>Step three</li>
+              <li>Step four</li>
             </ol>
 
             <h3>Description list</h3>
             <dl>
-              <dt>Publishable key</dt>
-              <dd>Used on the client side to initialize SDKs safely.</dd>
-              <dt>Secret key</dt>
-              <dd>Used on the server side to authenticate API requests.</dd>
-              <dt>Webhook signing secret</dt>
-              <dd>Used to verify incoming webhook payloads.</dd>
+              <dt>Label one</dt>
+              <dd>Description text for the first label.</dd>
+              <dt>Label two</dt>
+              <dd>Description text for the second label.</dd>
+              <dt>Label three</dt>
+              <dd>Description text for the third label.</dd>
             </dl>
           </section>
 
@@ -124,25 +120,22 @@
             <h2>Quotes and callouts</h2>
             <blockquote>
               <p>
-                Build your integration using test mode first, then switch to
-                live credentials only after validating webhook handling and
-                error cases.
+                Good default styles make common HTML elements readable before
+                any component-specific styling is added.
               </p>
-              <cite>Integration best practice</cite>
+              <cite>General note</cite>
             </blockquote>
 
             <div class="callout callout--info">
-              <strong>Note:</strong> This is a generic callout container you can
-              style later as an info box.
+              <strong>Note:</strong> This is an example info callout.
             </div>
 
             <div class="callout callout--warning">
-              <strong>Warning:</strong> Never expose secret API keys in browser
-              code.
+              <strong>Warning:</strong> This is an example warning callout.
             </div>
 
             <div class="callout callout--success">
-              <strong>Success:</strong> Test payment completed successfully.
+              <strong>Success:</strong> This is an example success callout.
             </div>
           </section>
 
@@ -150,65 +143,51 @@
             <h2>Code</h2>
             <p>
               Inline code should look distinct from prose, while code blocks
-              should handle overflow, padding, and syntax contrast.
+              should handle overflow, padding, and contrast.
             </p>
 
-            <pre><code>curl https://api.example.com/v1/customers \
-  -u sk_test_123: \
-  -d email="jenny.rosen@example.com" \
-  -d name="Jenny Rosen"</code></pre>
+            <pre><code>npm install
+npm run dev</code></pre>
 
-            <pre><code>async function createCustomer() {
-  const response = await fetch('/api/customers', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      email: 'jenny.rosen@example.com'
-    })
-  });
+            <pre><code>const createMessage = (name) => {
+  return `Hello, ${name}!`;
+};
 
-  if (!response.ok) {
-    throw new Error('Request failed');
-  }
-
-  return response.json();
-}</code></pre>
+console.log(createMessage('World'));</code></pre>
           </section>
 
           <section id="tables">
             <h2>Tables</h2>
             <table>
               <caption>
-                Example API response fields
+                Example table content
               </caption>
               <thead>
                 <tr>
-                  <th scope="col">Field</th>
+                  <th scope="col">Item</th>
                   <th scope="col">Type</th>
-                  <th scope="col">Required</th>
+                  <th scope="col">Status</th>
                   <th scope="col">Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">id</th>
-                  <td>string</td>
-                  <td>Yes</td>
-                  <td>Unique identifier for the object.</td>
+                  <th scope="row">Alpha</th>
+                  <td>Text</td>
+                  <td>Active</td>
+                  <td>Example row with generic content.</td>
                 </tr>
                 <tr>
-                  <th scope="row">email</th>
-                  <td>string</td>
-                  <td>No</td>
-                  <td>Customer email address.</td>
+                  <th scope="row">Beta</th>
+                  <td>Number</td>
+                  <td>Draft</td>
+                  <td>Another row for table styling tests.</td>
                 </tr>
                 <tr>
-                  <th scope="row">created</th>
-                  <td>timestamp</td>
-                  <td>Yes</td>
-                  <td>Unix timestamp for resource creation.</td>
+                  <th scope="row">Gamma</th>
+                  <td>Date</td>
+                  <td>Done</td>
+                  <td>Useful for borders, spacing, and alignment.</td>
                 </tr>
               </tbody>
             </table>
@@ -231,45 +210,45 @@
             <h2>Form elements</h2>
             <form>
               <p>
-                <label for="name">Name</label><br />
-                <input id="name" name="name" type="text" placeholder="Jenny Rosen" />
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="John Doe" />
               </p>
 
               <p>
-                <label for="email">Email</label><br />
+                <label for="email">Email</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="jenny.rosen@example.com"
+                  placeholder="john.doe@example.com"
                 />
               </p>
 
               <p>
-                <label for="plan">Plan</label><br />
-                <select id="plan" name="plan">
-                  <option>Starter</option>
-                  <option>Growth</option>
-                  <option>Enterprise</option>
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                  <option>Option one</option>
+                  <option>Option two</option>
+                  <option>Option three</option>
                 </select>
               </p>
 
               <fieldset>
-                <legend>Environment</legend>
-                <label><input type="radio" name="env" checked /> Test</label>
-                <label><input type="radio" name="env" /> Live</label>
+                <legend>Mode</legend>
+                <label><input type="radio" name="mode" checked /> Basic</label>
+                <label><input type="radio" name="mode" /> Advanced</label>
               </fieldset>
 
               <fieldset>
-                <legend>Capabilities</legend>
-                <label><input type="checkbox" checked /> Payments</label>
-                <label><input type="checkbox" /> Billing</label>
-                <label><input type="checkbox" /> Webhooks</label>
+                <legend>Features</legend>
+                <label><input type="checkbox" checked /> Option A</label>
+                <label><input type="checkbox" /> Option B</label>
+                <label><input type="checkbox" /> Option C</label>
               </fieldset>
 
               <p>
-                <label for="notes">Notes</label><br />
-                <textarea id="notes" name="notes" rows="5" placeholder="Add implementation notes..."></textarea>
+                <label for="notes">Notes</label>
+                <textarea id="notes" name="notes" rows="5" placeholder="Add your notes here..."></textarea>
               </p>
 
               <p>
@@ -282,10 +261,10 @@
           <section id="details">
             <h2>Details and miscellaneous elements</h2>
             <details>
-              <summary>Expand for extra implementation notes</summary>
+              <summary>Expand for additional content</summary>
               <p>
-                This area is useful for FAQs, advanced explanations, or optional
-                setup details.
+                This area is useful for optional information, notes, or advanced
+                details.
               </p>
             </details>
 
@@ -304,7 +283,7 @@
 
       <aside class="demo-toc" aria-label="On this page">
         <div class="demo-toc__inner">
-          <p class="eyebrow">On this page</p>
+          <p class="demo-label">On this page</p>
           <ul>
             <li><a href="#typography">Typography</a></li>
             <li><a href="#lists">Lists</a></li>
