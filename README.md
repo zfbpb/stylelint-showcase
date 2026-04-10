@@ -22,6 +22,9 @@ Default Stylelint configuration and usage example.
 - **VS Code Stylelint extension**  
   Displays lint errors and warnings directly in the editor while working.
 
+- **chokidar-cli**  
+  Watches SCSS files and triggers Stylelint automatically on save.
+
 ## Project purpose
 
 This project is a reusable Stylelint configuration example for linting CSS and Sass in any project.
@@ -44,6 +47,12 @@ pnpm install
 pnpm dev
 ```
 
+This starts:
+
+- Sass watch and CSS build
+- local preview server
+- automatic Stylelint checks on file save
+
 ## Run style linting manually
 
 Check all SCSS files:
@@ -56,6 +65,12 @@ Verbose output:
 
 ```bash
 pnpm lint:styles:verbose
+```
+
+Watch SCSS files and run Stylelint automatically on save:
+
+```bash
+pnpm lint:styles:watch
 ```
 
 ## Editor usage
