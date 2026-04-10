@@ -1,3 +1,2 @@
-# .stylelintignore
 css/**/*.css
 node_modules/**

@@ -1,4 +1,3 @@
-// stylelint.config.mjs
 export default {
   extends: ['stylelint-config-standard-scss'],
   plugins: ['@stylistic/stylelint-plugin'],
