@@ -24,7 +24,7 @@ Default Stylelint configuration and usage example.
 
 ## Project purpose
 
-This project is a reusable default Stylelint setup for HTML / Sass projects:
+This project is a reusable Stylelint configuration example for linting CSS and Sass in any project.
 
 - one tool for style linting
 - no Prettier
