@@ -13,6 +13,15 @@ export default {
       }
     ],
 
+    'declaration-property-value-disallowed-list': [
+      {
+        '/.*/': ['/^.*\\s{2,}.*$/']
+      },
+      {
+        message: 'Property values must not contain multiple consecutive spaces.'
+      }
+    ],
+    
     'font-family-name-quotes': 'always-where-required',
     'length-zero-no-unit': true,
 
