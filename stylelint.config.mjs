@@ -1,3 +1,4 @@
+// stylelint.config.mjs
 export default {
   extends: ['stylelint-config-standard-scss'],
   plugins: ['@stylistic/stylelint-plugin'],
@@ -9,19 +10,19 @@ export default {
     'selector-class-pattern': [
       '^([a-z0-9]+(?:-[a-z0-9]+)*)(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))?(?:--(?:[a-z0-9]+(?:-[a-z0-9]+)*))?$',
       {
-        message: 'Class names must follow BEM naming.'
-      }
+        message: 'Class names must follow BEM naming.',
+      },
     ],
 
     'declaration-property-value-disallowed-list': [
       {
-        '/.*/': ['/^.*\\s{2,}.*$/']
+        '/.*/': ['/^.*\\s{2,}.*$/'],
       },
       {
         message: 'Property values must not contain multiple consecutive spaces.'
-      }
+      },
     ],
-    
+
     'font-family-name-quotes': 'always-where-required',
     'length-zero-no-unit': true,
 
@@ -30,6 +31,9 @@ export default {
     'scss/dollar-variable-pattern': '^[a-z0-9-]+$',
     'scss/at-mixin-pattern': '^[a-z0-9-]+$',
     'scss/at-function-pattern': '^[a-z0-9-]+$',
+    'scss/double-slash-comment-empty-line-before': ['always', {
+      except: ['inside-block'],
+    }],
 
     '@stylistic/indentation': 2,
     '@stylistic/linebreaks': 'unix',
@@ -44,7 +48,7 @@ export default {
     '@stylistic/block-closing-brace-newline-after': [
       'always',
       {
-        ignoreAtRules: ['if', 'else']
+        ignoreAtRules: ['if', 'else'],
       }
     ],
     '@stylistic/block-closing-brace-newline-before': 'always',
@@ -72,6 +76,6 @@ export default {
     '@stylistic/selector-list-comma-newline-after': 'always',
     '@stylistic/selector-list-comma-space-before': 'never',
     '@stylistic/value-list-comma-space-after': 'always-single-line',
-    '@stylistic/value-list-comma-space-before': 'never'
-  }
-};
+    '@stylistic/value-list-comma-space-before': 'never',
+  },
+}
