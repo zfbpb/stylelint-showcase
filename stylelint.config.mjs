@@ -26,6 +26,7 @@ export default {
     'font-family-name-quotes': 'always-where-required',
     'length-zero-no-unit': true,
 
+    'scss/at-mixin-argumentless-call-parentheses': null,
     'scss/load-partial-extension': 'never',
     'scss/percent-placeholder-pattern': null,
     'scss/dollar-variable-pattern': '^[a-z0-9-]+$',
