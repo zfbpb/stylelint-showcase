@@ -1,4 +1,5 @@
 // stylelint.config.mjs
+
 export default {
   extends: ['stylelint-config-standard-scss'],
   plugins: ['@stylistic/stylelint-plugin'],
@@ -32,9 +33,7 @@ export default {
     'scss/dollar-variable-pattern': '^[a-z0-9-]+$',
     'scss/at-mixin-pattern': '^[a-z0-9-]+$',
     'scss/at-function-pattern': '^[a-z0-9-]+$',
-    'scss/double-slash-comment-empty-line-before': ['always', {
-      except: ['inside-block'],
-    }],
+    'scss/double-slash-comment-empty-line-before': null,
 
     '@stylistic/indentation': 2,
     '@stylistic/linebreaks': 'unix',
